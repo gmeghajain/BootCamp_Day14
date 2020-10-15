@@ -10,7 +10,6 @@ read -p "enter password" passwd
 
 validPasswd="^([A-Z]+)([a-zA-Z0-9]{7,20})$"
 
-
 if [[ $passwd =~ $validPasswd ]]
 then
 	echo " valid!"
