@@ -1,16 +1,16 @@
 #! /bin/bash -x
 
 # user registration problem
-#As a user need to enter valid lst name 
-#starts with capital latter and has minimum 3 characters
+#As a user need to enter valid email 
+#abc@bl.co.in all parts mandetory
 
-read -p "enter last name:" lastName
+read -p "enter email id" email
 
-validLastName="^([A-Z]+)([A-Za-z]{2,15})$"
+validEmail="^([a-zA-Z\.]+)([A-Za-z]+)@([a-z]+)\.([a-zA-Z]\.]{2,5})$"
 
-if [[ $lastName =~ $validLastName ]]
+if [[ $Email =~ $validEmail ]]
 then
-	echo "Entered valid last name!"
+	echo "Entered valid email!"
 else
-	echo "Entered invalid last name!"
+	echo "Entered invalid email!"
 fi
