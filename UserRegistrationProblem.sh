@@ -1,17 +1,17 @@
 #! /bin/bash -x
 
 # user registration problem
-#As a user need to follow pre defined mobile number format
-# 91 9876543210
+#As a user need to follow pre defined password format
+# minimum 8 character
 
-read -p "enter mobile number" mob
+read -p "enter password" passwd
 
-validMob="^([1-9]{1}[0-9]{1,3}\ [7-9]{1}[0-9]{9})$"
+validPasswd="^([a-zA-Z0-9]{8,20})$"
 
-if [[ $mob =~ $validMob ]]
+if [[ $passwd =~ $validPasswd ]]
 then
-	echo "Entered valid mobile number!"
+	echo " valid!"
 else
-	echo "Entered invalid mobile number!"
+	echo " invalid!"
 fi
 
