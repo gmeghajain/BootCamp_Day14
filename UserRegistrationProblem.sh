@@ -1,27 +1,17 @@
 #! /bin/bash -x
 
 # user registration problem
-<<<<<<< HEAD
-#As a user need to enter valid email 
-=======
-#As a user need to enter valid email
->>>>>>> uc3
-#abc@bl.co.in all parts mandetory
+#As a user need to follow pre defined mobile number format
+# 91 9876543210
 
-read -p "enter email id" email
+read -p "enter mobile number" mob
 
-validEmail="^([a-zA-Z\.]+)([A-Za-z]+)@([a-z]+)\.([a-zA-Z]\.]{2,5})$"
+validMob="^([1-9]{1}[0-9]{1,3}\ [7-9]{1}[0-9]{9})$"
 
-if [[ $Email =~ $validEmail ]]
+if [[ $mob =~ $validMob ]]
 then
-<<<<<<< HEAD
-	echo "Entered valid email!"
+	echo "Entered valid mobile number!"
 else
-	echo "Entered invalid email!"
-=======
-        echo "Entered valid email!"
-else
-        echo "Entered invalid email!"
->>>>>>> uc3
+	echo "Entered invalid mobile number!"
 fi
 
